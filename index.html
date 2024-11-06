@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You For Applying</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fdfbf7;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            text-align: center;
+        }
+        .header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        .thanks {
+            background-color: #4267B2;
+            color: white;
+            padding: 10px 20px;
+            font-size: 2em;
+        }
+        .for {
+            background-color: #ff7f50;
+            color: white;
+            padding: 10px 20px;
+            font-size: 2em;
+        }
+        .applying {
+            background-color: #90EE90;
+            color: black;
+            padding: 10px 20px;
+            font-size: 2em;
+            text-transform: uppercase;
+        }
+        .notification {
+            background-color: #ffd700;
+            color: black;
+            padding: 20px;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin: 20px auto;
+        }
+        .sponsored-section {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+        }
+        .sponsor-content {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .avatar {
+            width: 50px;
+            height: 50px;
+            background-color: #ddd;
+            border-radius: 50%;
+        }
+        .sponsor-text {
+            text-align: left;
+            max-width: 400px;
+        }
+        .sponsor-label {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 5px;
+        }
+        .sponsor-message {
+            font-size: 1em;
+            line-height: 1.4;
+        }
+        .visit-button {
+            background-color: #007bff;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 14px;
+            white-space: nowrap;
+            margin-left: 15px;
+        }
+        .timer {
+            font-size: 1.2em;
+            color: #666;
+            margin-left: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="thanks">Thanks</div>
+            <div class="for">For</div>
+            <div class="applying">Applying</div>
+        </div>
+        
+        <div class="notification">
+            We will email you shortly
+        </div>
+        
+        <div class="sponsored-section">
+            <div class="sponsor-content">
+                <div class="avatar"></div>
+                <div class="sponsor-text">
+                    <div class="sponsor-label">Sponsored message</div>
+                    <div class="sponsor-message">Learn how to make upto $30,000/month creating small niche websites and renting them on autopilot</div>
+                </div>
+                <a href="#" class="visit-button" id="visit-site">Visit site</a>
+            </div>
+            <div class="timer" id="countdown">20</div>
+        </div>
+    </div>
+
+    <script>
+        const targetUrl = 'https://abbielouis--checkoutarea.thrivecart.com/local-profits/66cf544209787/';
+        let timeLeft = 20; // Updated to 20 seconds
+        
+        const countdown = document.getElementById('countdown');
+        const visitButton = document.getElementById('visit-site');
+        
+        visitButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.location.href = targetUrl;
+        });
+
+        const timer = setInterval(() => {
+            timeLeft--;
+            countdown.textContent = timeLeft;
+            
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+                window.location.href = targetUrl;
+            }
+        }, 1000);
+    </script>
+</body>
+  </html>
