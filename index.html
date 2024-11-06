@@ -15,26 +15,35 @@
             max-width: 800px;
             margin: 50px auto;
             text-align: center;
+            padding: 0 20px;
+        }
+        .header-container {
+            position: relative;
+            height: 180px;
+            margin-bottom: 30px;
         }
         .header {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
             display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 30px;
             flex-wrap: wrap;
+            gap: 10px;
+            width: fit-content;
         }
         .thanks {
             background-color: #4267B2;
             color: white;
             padding: 10px 20px;
             font-size: 2em;
+            transform: rotate(-5deg);
         }
         .for {
             background-color: #ff7f50;
             color: white;
             padding: 10px 20px;
             font-size: 2em;
+            margin-top: 20px;
         }
         .applying {
             background-color: #90EE90;
@@ -42,6 +51,8 @@
             padding: 10px 20px;
             font-size: 2em;
             text-transform: uppercase;
+            margin-left: -20px;
+            transform: rotate(2deg);
         }
         .notification {
             background-color: #ffd700;
@@ -55,6 +66,9 @@
             justify-content: center;
             text-align: center;
             margin: 20px auto;
+            position: absolute;
+            right: 50px;
+            top: 0;
         }
         .sponsored-section {
             border: 1px solid #ddd;
@@ -74,8 +88,9 @@
         .avatar {
             width: 50px;
             height: 50px;
-            background-color: #ddd;
             border-radius: 50%;
+            overflow: hidden;
+            background-color: #f0f0f0;
         }
         .sponsor-text {
             text-align: left;
@@ -109,19 +124,29 @@
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <div class="thanks">Thanks</div>
-            <div class="for">For</div>
-            <div class="applying">Applying</div>
-        </div>
-        
-        <div class="notification">
-            We will email you shortly
+        <div class="header-container">
+            <div class="header">
+                <div class="thanks">Thanks</div>
+                <div class="for">For</div>
+                <div class="applying">Applying</div>
+            </div>
+            <div class="notification">
+                We will email<br>you shortly
+            </div>
         </div>
         
         <div class="sponsored-section">
             <div class="sponsor-content">
-                <div class="avatar"></div>
+                <div class="avatar">
+                    <svg width="50" height="50" viewBox="0 0 50 50">
+                        <circle cx="25" cy="20" r="12" fill="#666"/>
+                        <circle cx="25" cy="15" r="8" fill="#f0f0f0"/>
+                        <path d="M 8 50 Q 25 35 42 50" fill="#666"/>
+                        <circle cx="22" cy="14" r="2" fill="#666"/>
+                        <circle cx="28" cy="14" r="2" fill="#666"/>
+                        <path d="M 20 20 Q 25 23 30 20" fill="none" stroke="#666" stroke-width="1.5"/>
+                    </svg>
+                </div>
                 <div class="sponsor-text">
                     <div class="sponsor-label">Sponsored message</div>
                     <div class="sponsor-message">Learn how to make upto $30,000/month creating small niche websites and renting them on autopilot</div>
@@ -134,7 +159,7 @@
 
     <script>
         const targetUrl = 'https://abbielouis--checkoutarea.thrivecart.com/local-profits/66cf544209787/';
-        let timeLeft = 20; // Updated to 20 seconds
+        let timeLeft = 20;
         
         const countdown = document.getElementById('countdown');
         const visitButton = document.getElementById('visit-site');
@@ -155,4 +180,4 @@
         }, 1000);
     </script>
 </body>
-  </html>
+                        </html>
